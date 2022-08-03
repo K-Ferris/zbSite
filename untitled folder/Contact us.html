@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title> Contact us </title>
+ <meta charset="UTF-8">
+ <link rel = "Stylesheet" type="text/css" href = "CSS\Style.css">
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+
+ body{
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    box-sizing: border-box;
+    font-family: poppins;
+ }
+
+section{
+  
+    position:relative;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    min-height:100vh;
+    min-width: 100%;
+    background: url(Images/Hn.jpg);
+    
+    
+}
+section::before{
+    content: '';
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100vh;
+    background: url(Images/Hn.jpg);
+    background-repeat: no-repeat;
+}
+section .container{
+    position:relative;
+    min-width: 900px;
+    min-height: 370px;
+    left:-150px;
+    display:flex;
+    z-index: 1000; 
+    
+}
+section .container .contactInfo{
+    position:absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px;);
+    background: #8f0001;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+ 
+}
+
+section .container .contactInfo h2{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+section .container .contactInfo .info{
+    position:relative;
+    margin: 20px 0;
+    color: #fff;
+}
+section .container .contactInfo .info li{
+    position:relative;
+    list-style: none;
+    display:flex;
+    margin:20px 0;
+    cursor: pointer;
+    align-items:flex-start;
+    color: #fff;
+    
+}
+section .container .contactInfo .info li span:nth-child(1){
+
+    width: 30px;
+    min-width: 30px;
+    
+}
+section .container .contactInfo .info li span:nth-child(1) .fas{
+    max-width:100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+section .container .contactInfo .info li span:nth-child(2){
+color: #fff;
+margin-left: 10px;
+font-weight: 300;
+opacity: 0.5;
+
+}
+section .container .contactInfo .info li:hover span:nth-child(1) ,
+section .container .contactInfo .info li:hover span:nth-child(2){
+
+    opacity: 1;
+}
+section .container .contactInfo .sci{
+    position:relative;
+    display:flex;
+
+}
+section .container .contactInfo .sci li{
+  
+    list-style: none;
+    margin-right: 15px;
+    transition: 0.5s;
+    
+}
+section .container .contactInfo .sci li a {
+    text-decoration: none;
+  
+ 
+}
+section .container .contactInfo .sci li a span{
+    filter: invert(1);
+    opacity: 1;
+    color: #fff;
+}
+section .container .contactInfo .sci li:hover a span{
+    opacity: 1; 
+}
+section .container .contactForm{
+    position:absolute;
+    padding: 70px 50px;
+    background: #fff;
+    margin-left: 150px;
+    padding-left: 350px;
+    width: calc(100% - 250px);
+    height: 95%;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+}
+section .container .contactForm h2{
+    color:#000;
+    position: relative;
+    top:-60px;
+    font-size: 24px;
+    font-weight: 500;
+}
+section .container .contactForm form{
+    position: relative;
+    top: -45px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+section .container .contactForm form .inputBox{
+    position: relative;
+    margin: 0 0 35px 0;
+}
+section .container .contactForm form .inputBox.w50{
+    position:relative;
+    top:-10px;
+    width: 47%;
+
+}
+section .container .contactForm form .inputBox.w100{
+    width: 100%;
+    
+}
+section .container .contactForm form .inputBox input{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+section .container .contactForm form .inputBox input,
+section .container .contactForm form .inputBox textarea{
+
+    width: 100%; !important;
+    padding: 5px 0;
+    font-size: 18px;
+    resize: none;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+
+}
+
+section .container .contactForm form .inputBox textarea{
+    min-height:120px;
+}
+
+section .container .contactForm form .inputBox span{
+    position:absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 18px;
+    resize: none;
+    font-weight: 300;
+    color: #333;
+    transition: 0.5s;
+    pointer-events:none;
+}
+
+section .container .contactForm form .inputBox input:focus ~ span,
+section .container .contactForm form .inputBox textarea:focus ~ span,
+section .container .contactForm form .inputBox input:valid ~ span,
+section .container .contactForm form .inputBox textarea:valid ~ span{
+
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #8f0001;
+}
+
+section .container .contactForm form .inputBox input[type = "submit"]{
+    position:relative;
+    cursor: pointer;
+    background: #8f0001;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+    transition: 0.5s; 
+}
+
+section .container .contactForm form .inputBox input[type = "submit"]:hover{
+    background: #ff568c;
+}
+
+</style>
+
+ </head>
+ <body>  
+<nav>  
+    <img src = "Images\HOC Logo3.png" width= "110px" height= "110px" class = Logo> 
+    <div class = "menu">
+    <ul>
+        <li><a href = "index.php">Home</a></li>
+        <li><a href = "About us.php">About us</a></li>
+        <li><a href = "Contact us.php">Contact us</a></li>
+        <li><a href = "Privacy.php">Privacy</a></li>
+        <li><a href = "GeneralUser_SignIn.php">Login</a></li>
+        <li><a href = "GeneralUser_SignIn.php">Sign up</a></li>
+    </ul>
+    </div>
+</nav>
+
+
+<section>
+    <div class="container">
+
+     <div class="contactInfo"  data-aos="fade-in" data-aos-duration="1200">
+
+        <div>
+            <h2  data-aos="fade-left" data-aos-duration="1200">Contact Info</h2>
+            <ul class = "info"  data-aos="fade-left" data-aos-duration="1200">
+                <li>
+                <span class ="fas fa-map-marker-alt"></span>
+                <span> 18 Jameson Ave Lynwood Pretoria </span>
+
+                </li>
+                <li>
+                <span class ="fas fa-envelope"></span>
+                <span> QskTech17@gmail.com </span>
+
+                </li>
+                <li>
+                <span class ="fas fa-phone-alt"></span>
+                <span> +27 82 123 4567 </span>
+
+                </li>
+
+            </ul>
+            <ul class = "sci"  data-aos="fade-in" data-aos-duration="1200">
+
+                <li><a href = "#"><span class = "fab fa-facebook-f"></span></a></li>
+                <li><a href = "#"><span class = "fab fa-twitter"></span></a></li>
+                <li><a href = "#"><span class = "fab fa-instagram"></span></a></li>
+
+            <ul>
+
+        </div>
+    
+     </div>
+    
+        <div class="contactForm"  data-aos="fade-right" data-aos-duration="1200">
+            <h2>Send your query</h2>
+          <form action = "Submit_Handler.php" method = "POST">
+
+            <div class="inputBox w50">
+
+            <input type = "text" name = "FirstName" required>
+            <span> First Name </span>
+            
+            </div>
+            <div class="inputBox w50">
+
+            <input type = "text" name = "LastName" required>
+            <span> Last Name </span>
+            
+            </div>
+            <div class="inputBox w50">
+
+            <input type = "text" name = "Email" required>
+            <span> Email address </span>
+
+            </div>
+            <div class="inputBox w50">
+
+            <input type = "number" name = "HOCid" required>
+            <span> HOC ID </span>
+
+            </div>
+            <div class="inputBox w100">
+
+            <textarea name = "Message" required></textarea>
+            <span>Write your query here ...</span>
+
+            </div>
+            <div class="inputBox w100">
+            
+            <input type = "submit" name="send_contactUs"value = "Send">
+
+            </div>
+            
+            </form>
+        
+        </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  </body>
+</html>
