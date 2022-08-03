@@ -1742,5 +1742,6 @@ background: #F9F9F9;
 @media (max-width: 480px){ 
 .team_area {
 width: 99%;
+height: 99%;
 }
 }
